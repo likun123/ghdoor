@@ -1,0 +1,119 @@
+  <!DOCTYPE html>  
+  <html>
+  <head>
+    {dede:include filename="meta.html"/}
+    <script src="{dede:global.cfg_templets_skin/}/js/product.js"></script>
+  </head>
+  <body id="wap">
+    {dede:include filename="header.html"/}
+    <div class="warpper">
+      <div class="prod1">
+        <d  iv class="prod1_box">
+          <div class="product_inner_banner">
+            <img src="{dede:global.cfg_templets_skin/}/images/product_inner_banner.jpg" width="100%" class="hidden-xs hidden-sm">  
+            <img src="{dede:global.cfg_templets_skin/}/images/product_inner_banner_xp.jpg" width="100%" class="visible-xs visible-sm"></div>
+          <div class="prod1_top" style="top: 0px; opacity: 1;">
+            <h2>{dede:field.typename/}</h2>
+          </div>
+
+          <div class="prod1_top_wenzi" style="top: 0px; opacity: 1;">
+            <div class="container">
+              <p>{dede:field.content/}</p>
+            </div>
+          </div>
+          <div class="prod1_box hidden-xs hidden-sm" id="d2">
+            <div class="container">
+              <div class="product_i_top clearfix">
+                <div class="top_l hidden-xs hidden-sm">&gt;产品搜索</div>
+                <div class="search hidden-xs hidden-sm">
+                  <form action="/plus/advancedsearch.php" name="formsearch">
+                    <input name="q" type="text" id="search-keyword" placeholder="产品名搜索" value="{dede:global name='keyword' function='RemoveXSS(@me)'/}" onfocus="if(this.value=='在这里搜索...'){this.value='';}"  onblur="if(this.value==''){this.value='在这里搜索...';}" />  
+                    <button type="submit" class="search-submit">搜索</button>
+                  </form>
+                </div>
+              </div>
+              <div class="resultbar">
+                搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong>
+                的结果
+              </div>
+              <div class="result_content">
+                <div class="sidebar">
+                  <h2>相关搜索</h2>
+                  <ul>
+                    <li>{dede:likewords num='8'/}</li>
+                  </ul>
+                  <div class="sidebar_banner">
+                    <script src='{dede:global.cfg_cmsurl/}/plus/ad_js.php?aid=16' language='javascript'></script>
+                  </div>
+                </div>
+                <div class="resultlist">
+                  <ul>
+                    {dede:list perpage='20'}
+                    <li>
+                      <h3>
+                        <a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+                      </h3>
+                      <p>[field:description/]...</p>
+                      <span>
+                        <a href="[field:arcurl/]">[field:global.cfg_basehost/][field:arcurl/]</a>
+                        <small>分类：</small>
+                        <a href="[field:typeurl/]" target="_blank">[field:typename/]</a>
+                        <small>点击：</small>
+                        [field:click/]
+                        <small>日期：</small>
+                        [field:stime/]
+                      </span>
+                    </li>
+                    {/dede:list}
+                  </ul>
+                  <div class="fl dede_pages">
+                    <ul class="pagelist">{dede:pagelist listsize='4'/}</ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=" clear"></div>
+          </div>
+          <div class="device visible-xs visible-sm">
+            <div class="swiper-container  hlp" style="cursor: -webkit-grab;">
+              <div class="swiper-wrapper hlp">
+                {dede:list pagesize='6'}
+                <div class="swiper-slide  hlp swiper-slide-duplicate">
+                  <a href="[field:arcurl/]">
+                    <div class="bg_img">
+                      <img src="[field:litpic/]" width="100%"></div>
+                    <div class="hover-box" style="left: 0px;"></div>
+                    <span class="shiz">
+                      <span class="heng"></span>
+                      <span class="shu"></span>
+                    </span>
+                  </a>
+                  <a href="[field:arcurl/]" class="porod1_b3_b">
+                    [field:title/]
+                    <span>+</span>
+                  </a>
+                </div>
+                {/dede:list}
+              </div>
+            </div>
+          </div>
+          <div class="pagination visible-xs visible-sm">
+            {dede:list pagesize='6'}
+            <span class="swiper-pagination-switch"></span>
+            {/dede:list}
+          </div>
+        </div>
+      </div>
+      {dede:include filename="footer.html"/}
+      <script src="{dede:global.cfg_templets_skin/}/js/idangerous.swiper.min.js"></script>
+      <script>      
+      var mySwiper = new Swiper('.swiper-container',{
+        pagination: '.pagination',
+        loop:true,
+        grabCursor: true,
+        paginationClickable: true
+      })
+
+    </script>
+  </body>
+</html>

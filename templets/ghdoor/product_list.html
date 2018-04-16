@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  {dede:include filename="meta.html"/}
+  <script src="{dede:global.cfg_templets_skin/}/js/product.js"></script>
+</head>
+<body id="wap">
+  {dede:include filename="header.html"/}
+  <div class="warpper">
+    <div class="prod1">
+      <d  iv class="prod1_box">
+        <div class="product_inner_banner">
+          <img src="{dede:global.cfg_templets_skin/}/images/product_inner_banner.jpg" width="100%" class="hidden-xs hidden-sm">
+          <img src="{dede:global.cfg_templets_skin/}/images/product_inner_banner_xp.jpg" width="100%" class="visible-xs visible-sm"></div>
+        <div class="prod1_top" style="top: 0px; opacity: 1;">
+          <h2>{dede:field.typename/}</h2>
+        </div>
+
+        <div class="prod1_top_wenzi" style="top: 0px; opacity: 1;">
+          <div class="container">
+            <p>{dede:field.content/}</p>
+          </div>
+        </div>
+        <div class="prod1_box hidden-xs hidden-sm" id="d2">
+          <div class="container">
+            <div class="product_i_top clearfix">
+              <div class="top_l hidden-xs hidden-sm">&gt;{dede:field.typename/}</div>
+              <div class="pro_i_nav">
+                <ul>
+                  {dede:channel channel='1' type='son' currentstyle="
+                  <li>
+                    <a href='~typelink~' class='b_xz'></a>
+                    <a href='~typelink~' class='pro_on'>~typename~</a>
+                  </li>
+                  "}
+                  <li>
+                    <a href='[field:typeurl/]' class='b'></a>
+                    <a href='[field:typeurl/]' class='pro_on'>[field:typename/]</a>
+                  </li>
+                  {/dede:channel}
+                </ul>
+              </div>
+            </div>
+            <div class="porod1_b3">
+              <div class="porod1_b3_c">
+                <div class="row k1" style="top: 0px; opacity: 1;">
+                  {dede:list pagesize='6'}
+                  <div class="col-md-6 nul">
+                    <a href="[field:arcurl/]">
+                      <div class="bg_img">
+                        <img src="[field:litpic/]" width="100%">
+
+                        <div class="hover-box" style="top: 0%; width: 0%; left: 0px;"></div>
+                        <span class="shiz">
+                          <span class="heng" style="top: 50%; width: 0px; left: 0%;"></span>
+                          <span class="shu" style="left: 50%; height: 0px; top: 0%;"></span>
+                        </span>
+                      </div>
+                    </a>
+
+                    <a href="[field:arcurl/]" class="porod1_b3_b">[field:title/]</a>
+                  </div>
+                  {/dede:list}
+                  <div class="clear"></div>
+                </div>
+              </div>
+              <div class="porod1_b3_c">
+                <div class="row k2" style="top: 0px; opacity: 1;"></div>
+                <div align="center" class="page">
+                  <div class="pagination2" style="left:0%">
+                    {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="6"/}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" clear"></div>
+        </div>
+        <div class="device visible-xs visible-sm">
+          <div class="swiper-container  hlp" style="cursor: -webkit-grab;">
+            <div class="swiper-wrapper hlp">
+              {dede:list pagesize='6'}
+              <div class="swiper-slide  hlp swiper-slide-duplicate">
+                <a href="[field:arcurl/]">
+                  <div class="bg_img">
+                    <img src="[field:litpic/]" width="100%"></div>
+                  <div class="hover-box" style="left: 0px;"></div>
+                  <span class="shiz">
+                    <span class="heng"></span>
+                    <span class="shu"></span>
+                  </span>
+                </a>
+                <a href="[field:arcurl/]" class="porod1_b3_b">
+                  [field:title/]
+                  <span>+</span>
+                </a>
+              </div>
+              {/dede:list}
+            </div>
+          </div>
+        </div>
+        <div class="pagination visible-xs visible-sm">
+          {dede:list pagesize='6'}
+          <span class="swiper-pagination-switch"></span>
+          {/dede:list}
+        </div>
+      </div>
+    </div>
+    {dede:include filename="footer.html"/}
+    <script src="{dede:global.cfg_templets_skin/}/js/idangerous.swiper.min.js"></script>
+    <script>      
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+    paginationClickable: true
+  })
+
+</script>
+</body>
+
+  </html>

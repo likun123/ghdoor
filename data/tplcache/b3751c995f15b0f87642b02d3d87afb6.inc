@@ -1,0 +1,1 @@
+<span  class="ab2_sp ab2_on" >[field:title/]</span>

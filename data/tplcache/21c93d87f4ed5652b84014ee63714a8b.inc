@@ -1,0 +1,1 @@
+<a href="[field:typeurl/]">CLICK MORE</a>

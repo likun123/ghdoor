@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  {dede:include filename="meta.html"/}
+  <script src="{dede:global.cfg_templets_skin/}/js/news.js"></script>
+</head>
+
+<body id="wap">
+  {dede:include filename="header.html"/}
+  <div class="warpper">
+    <div class="banner_inner" style="background:url({dede:global.cfg_templets_skin/}/images/banner1.jpg) center no-repeat; background-size:cover;"></div>
+    <div class="inner_sec1">
+      <div class="ab_sec1">
+        <div class="container">
+          <div class="ab_sec1_con" style=" background:#3e3d3b;">
+            <div class="ab_sec1_con1">
+              <h5>HOME</h5>
+              <span style="color:#fff;">NEWS</span>
+            </div>
+            <div class="news" style="padding-top:10px;">
+              <div class="news_top">
+                <p style="color:#fff;">新闻中心</p>
+                <h2>NEWS CENTER</h2>
+              </div>
+              <div class="news_inner news_detail clearfix">
+                <h2>{dede:field.title/}</h2>
+                <span>已阅读{dede:field.click/}次</span>
+                <span>发布日期：{dede:field name='pubdate' function='GetDateMk(@me)'/}</span>
+                <p> <br></p>
+                {dede:field.body/}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {dede:include filename="footer.html" /}
+</body>
+</html>

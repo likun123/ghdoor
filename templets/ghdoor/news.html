@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  {dede:include filename="meta.html"/}
+  <script src="{dede:global.cfg_templets_skin/}/js/news.js"></script>
+</head>
+
+<body id="wap">
+  {dede:include filename="header.html"/}
+  <div class="warpper">
+    <div class="banner_inner" style="background:url({dede:global.cfg_templets_skin/}/images/banner1.jpg) center no-repeat; background-size:cover;"></div>
+    <div class="inner_sec1">
+      <div class="ab_sec1">
+        <div class="container">
+          <div class="ab_sec1_con" style=" background:#3e3d3b;">
+            <div class="ab_sec1_con1">
+              <h5>HOME</h5>
+              <span style="color:#fff;">NEWS</span>
+            </div>
+            <div class="news" style="padding-top:10px;">
+              <div class="news_top">
+                <p style="color:#fff;">新闻中心</p>
+                <h2>NEWS CENTER</h2>
+              </div>
+              {dede:list pagesize='4'}
+              <div class="news_center">
+                <div class="newsleft">
+                  <span>[field:pubdate function='strftime("%b",@me)'/]</span>
+                  <p>[field:pubdate function='strftime("%d",@me)'/]</p>
+                  <span>[field:pubdate function='strftime("%Y",@me)'/]</span>
+                </div>
+                <a href="[field:arcurl/]">
+                  <div class="news_img">
+                    <img src="[field:litpic/]" class="newscent" width="100%" />
+                    <span>
+                      <img src="[field:global.cfg_templets_skin/]/images/arrow-left-white.png"></span>
+                  </div>
+                </a>
+                <a href="[field:arcurl/]">
+                  <div class="newsright">
+                    <h4>[field:title/]</h4>
+                    <p class="hidden-xs hidden-sm">[field:description/]...</p>
+                  </div>
+                </a>
+              </div>
+              {/dede:list}
+            </div>
+
+            <div  align="center" class="page">
+              <div class="pagination">
+                {dede:pagelist listitem="info,index,end,pre,next,pageno,option" listsize="4"/}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="new_box" style="background:#3e3d3b;">
+        <div class="container">
+          <div class="news_top">
+            <p style="color:#fff;">业内资讯</p>
+            <h2>NEWS CENTER</h2>
+          </div>
+          <div class="row clm">
+            {dede:arclist typeid='4' row='4'}
+            <div class="col-md-3 col-xs-12">
+              <div class="new_d">
+                <a href="http://ghdoor.com/news_inner_18.html">
+                  <p>
+                    <span class="new_sp">[field:pubdate function='strftime("%Y",@me)'/]</span>
+                    <span class="new_sp1">[field:pubdate function='strftime("%m",@me)'/]</span>
+                    <span class="new_sp2">[field:pubdate function='strftime("%d",@me)'/]</span>
+                  </p>
+                  <div class="new_img">
+                    <img src="[field:litpic/]" width="100%"></div>
+                  <h3>[field:title/]</h3>
+                </a>
+              </div>
+            </div>
+            {/dede:arclist}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {dede:include filename="footer.html" /}
+</body>
+  <style>
+  .pagination > li > a, .pagination > li > span{
+      font-size: 12px;
+    color: #000;
+    padding: 6px 12px;
+    margin-right: 1px;
+    background: #ebe8e8;
+    transition: color .6s,border-color .6s,background-color .6s,border .6s;
+  }
+  .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus {
+    background: #000;
+    color: #fff !important;
+    transition: color .6s,border-color .6s,background-color .6s,border .6s;
+}
+  </style>
+</html>

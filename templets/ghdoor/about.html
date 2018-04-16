@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  {dede:include filename="meta.html"/}
+  <script src="{dede:global.cfg_templets_skin/}/js/about.js"></script>
+</head>
+<body id="wap">
+  {dede:include filename="header.html"/}
+  <div class="warpper">
+    <div class="banner_inner" style="background:url({dede:global.cfg_templets_skin/}/images/banner1.jpg) center no-repeat; background-size:cover;"></div>>
+    <div class="inner_sec1" id="a1">
+      <div class="ab_sec1">
+        <div class="container">
+          <div class="ab_sec1_con">
+            <div class="ab_sec1_con1">
+              <h5>HOME</h5>
+              <span>ABOUT</span>
+            </div>
+            <div class="ab_sec1_con2">
+              <h5>关于我们</h5>
+              <span>About Us</span>
+              {dede:field.content/}
+            </div>
+            <div class="ab_sec1_con3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <style>
+    .ab_sec2_con2_list img,.ab_sec1_con3_img img{
+      width: 100%;
+    }
+    </style>
+    <div class="ab_sec2" id="a2">
+      <div class="container">
+        <div class="ab_sec2_con">
+          <h5>发展历程</h5>
+          <span>HISTORY TIMELINE</span>
+          <div class="ab_sec2_con1 clearfix hidden-xs hidden-sm">
+            {dede:arclist typeid='1' limit='0,1' row='1'}
+            <span  class="ab2_sp ab2_on" >[field:title/]</span>
+            {/dede:arclist}
+      {dede:arclist typeid='1' limit='1,20'}
+            <span >[field:title/]</span>
+            {/dede:arclist}
+            <div class="ab2_line"></div>
+          </div>
+          <div class="ab_sec2_con2 hidden-xs hidden-sm">
+            <div class="ab_sec2_next">
+              <img src="{dede:global.cfg_templets_skin/}/images/ab_sec2_r.png"></div>
+            <div class="ab_sec2_prev">
+              <img src="{dede:global.cfg_templets_skin/}/images/ab_sec2_l.png"></div>
+            {dede:arclist channelid='1' addfields='body' limit='0,1'}
+            <div class="ab_sec2_con2_list"  style="display:block;" >
+              <h5>[field:title/]</h5>
+              <p>[field:body/]</p>
+            </div>
+            {/dede:arclist}
+            {dede:arclist channelid='1' addfields='body' limit='1,20'}
+            <div class="ab_sec2_con2_list" >
+              <h5>[field:title/]</h5>
+              <p>[field:body/]</p>
+            </div>
+            {/dede:arclist}
+          </div>
+
+          <div class="visible-xs visible-sm">
+            <img src="{dede:global.cfg_templets_skin/}/images/sec2_xp.jpg" width="100%">
+            <div class="device" style=" padding-top:30px; margin:0;background:transparent;">
+              <div class="arrow-right" style="background:none; top:9%; right:20%;">
+                <img src="{dede:global.cfg_templets_skin/}/images/ab_sec2_r.png"></div>
+              <div class="arrow-left" style="background:none;top:7%; left:0%;">
+                <img src="{dede:global.cfg_templets_skin/}/images/ab_sec2_l.png"></div>
+              <div class="swiper-container">
+                <div class="swiper-wrapper">
+                {dede:arclist channelid='1' addfields='body' limit='0,1'}
+                  <div class="swiper-slide">
+                    <div class="ab_sec2_con2_list" style="display:block;">
+                      <h5>[field:title/]</h5>
+                      <p>
+                        [field:body/]
+                      </p>
+                    </div>
+                  </div>
+                  {/dede:arclist}
+                  {dede:arclist channelid='1' addfields='body' limit='1,20'}
+                  <div class="swiper-slide">
+                    <div class="ab_sec2_con2_list" style="display:block;">
+                      <h5>[field:title/]</h5>
+                      <p>
+                        [field:body/]
+                      </p>
+                    </div>
+                  </div>
+                  {/dede:arclist}
+                </div>
+              </div>
+              <div class="pagination hidden-xs hidden-sm" style="left:45%;"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+
+  {dede:include filename="footer.html"/}
+  <script src="{dede:global.cfg_templets_skin/}/js/idangerous.swiper.min.js"></script>
+<script>
+  var mySwiper = new Swiper('.swiper-container',{
+    pagination: '.pagination',
+    loop:true,
+    grabCursor: true,
+    paginationClickable: true
+  })
+  $('.arrow-left').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipePrev()
+  })
+  $('.arrow-right').on('click', function(e){
+    e.preventDefault()
+    mySwiper.swipeNext()
+  })
+</script>
+  </body>
+
+</html>

@@ -1,0 +1,23 @@
+<?php
+$myaddons = array();
+$maNum = 0;
+$myaddons[$maNum] = array('1', '/ghdoor/uploads/180407/1-1P40H14J0C8.jpg');
+$maNum = 1;
+$myaddons[$maNum] = array('2', '/ghdoor/uploads/180407/1-1P40H14QD44.jpg');
+$maNum = 2;
+$myaddons[$maNum] = array('3', '/ghdoor/uploads/180407/1-1P40H14S63K.jpg');
+$maNum = 3;
+$myaddons[$maNum] = array('4', '/ghdoor/uploads/180407/1-1P40H14ZWC.jpg');
+$maNum = 4;
+$myaddons[$maNum] = array('5', '/ghdoor/uploads/180407/1-1P40H24210926.jpg');
+$maNum = 5;
+$myaddons[$maNum] = array('6', '/ghdoor/uploads/180407/1-1P40H2424VO.jpg');
+$maNum = 6;
+$myaddons[$maNum] = array('7', '/ghdoor/uploads/180407/1-1P40H24313354.jpg');
+$maNum = 7;
+$myaddons[$maNum] = array('8', '/ghdoor/uploads/180407/1-1P40H2433MJ.jpg');
+$maNum = 8;
+$myaddons[$maNum] = array('9', '/ghdoor/uploads/180407/1-1P40H24402Y2.jpg');
+$maNum = 9;
+$myaddons[$maNum] = array('10', '/ghdoor/uploads/180407/1-1P40H24433121.jpg');
+$maNum = 10;
