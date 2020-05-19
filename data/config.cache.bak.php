@@ -1,8 +1,8 @@
 <?php
-$cfg_basehost = 'http://localhost';
-$cfg_cmspath = '/ghdoor';
-$cfg_cookie_encode = '0K53YAKPbXq2QspNvkT9gnwMewkb';
-$cfg_indexurl = '/ghdoor';
+$cfg_basehost = 'http://www.door.com';
+$cfg_cmspath = '';
+$cfg_cookie_encode = 'dSOLY6V1AknCWGGiuCNfP3xOMWXxkk';
+$cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
 $cfg_indexname = '主页';
 $cfg_webname = '我的网站';

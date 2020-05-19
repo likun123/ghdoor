@@ -1,8 +1,8 @@
 <?php
 $cfg_disable_funs = 'phpinfo,eval,exec,passthru,shell_exec,system,proc_open,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,file_put_contents';
 $cfg_disable_tags = 'php';
-$cfg_basehost = 'http://door.cc';
-$cfg_cmspath = '/ghdoor';
+$cfg_basehost = 'http://www.door.com';
+$cfg_cmspath = '';
 $cfg_cookie_encode = '0K53YAKPbXq2QspNvkT9gnwMewkb';
 $cfg_indexurl = '/';
 $cfg_backup_dir = 'backupdata';
